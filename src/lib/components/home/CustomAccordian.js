@@ -1,7 +1,7 @@
 import React from 'react';
 import { Accordion, AccordionDetails, AccordionSummary, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import StatusChip from '../common/info/StatusChip';
+import StatusChip from '../common/info/HomeStatusChip';
 
 const CustomAccordion = ({ testbedName, responseArray }) => {
   const uniqueStatuses = responseArray.reduce((acc, report) => {
@@ -12,6 +12,12 @@ const CustomAccordion = ({ testbedName, responseArray }) => {
     });
     return acc;
   }, []);
+
+  const statusMap = {
+    PASS: 'Compliant',
+    FAIL: 'Non-Compliant',
+    SKIP: 'Skipped'
+  };
   
   return (
     <Accordion>
@@ -38,7 +44,7 @@ const CustomAccordion = ({ testbedName, responseArray }) => {
                 <TableRow key={report.id}>
                   <TableCell>{report.input_parameters.server || report.input_parameters.url || report.input_parameters.base_url}</TableCell>
                   {report.phases.map((phase) => (
-                    <TableCell key={phase.phase_name}><StatusChip status={phase.status}></StatusChip></TableCell>
+                    <TableCell key={phase.phase_name}><StatusChip status={statusMap[phase.status]}></StatusChip></TableCell>
                   ))}
                 </TableRow>
               ))}
