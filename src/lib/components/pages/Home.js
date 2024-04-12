@@ -10,6 +10,7 @@ import { PageContainer } from '../common/layout';
 import SpaceDivider from '../common/layout/SpaceDivider';
 import { simpleApiCall } from '../../utils/apiUtils';
 import ResponseAccordion from '../home/ResponseAccordion';
+import Footer from '../common/navigation/Footer.js';
 
 const Home = props => {
 
@@ -37,16 +38,7 @@ const Home = props => {
     
     return (
         <PageContainer>
-            <Typography variant="h2">Future Home of the GA4GH Testbed</Typography>
-            <Typography variant="h5">Deployment Environment: {process.env.REACT_APP_DEPLOYMENT_ENV}</Typography>
-            <Button
-                variant="contained"
-                color="primary"
-                component={Link}
-                to="/reports/eab621df-37ad-4441-889e-5f3e5ffc3c27"
-            >
-                View Demo Report
-            </Button>
+            <Typography variant="h2">GA4GH Testbed</Typography>
             <SpaceDivider />
 
             <div>
@@ -62,6 +54,7 @@ const Home = props => {
             </div>
 
         </PageContainer>
+        
     )
 }
 

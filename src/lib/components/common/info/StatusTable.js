@@ -38,68 +38,13 @@ const StatusTable = props => {
                 </TableHead>
                 <TableBody>
                     {props.phases.map(phase => {
-                        const phaseRow = (
-                            <TableRow className={rowClasses[phase.status]}>
-                                <TableCell>{phase.phase_name}</TableCell>
-                                <TableCell></TableCell>
-                                <TableCell></TableCell>
-                                <TableCell>
-                                    <StatusChip
-                                        status={phase.status}
-                                    />
-                                </TableCell>
-                                <TableCell>
-                                    <ReportButton
-                                        useColor={true}
-                                        useIcon={false}
-                                        variant="contained"
-                                        label="View"
-                                        status={phase.status}
-                                        to={formatForDomId([
-                                            phase.phase_name
-                                        ])}
-                                     />
-                                </TableCell>
-                            </TableRow>
-                        )
-
-                        if (! phase.hasOwnProperty("tests")) {
-                            return [phaseRow];
-                        }
-
                         const testAndCaseRows = phase.tests.map(test => {
-                            const testRow = (
-                                <TableRow className={rowClasses[test.status]}>
-                                    <TableCell>{phase.phase_name}</TableCell>
-                                    <TableCell>{test.test_name}</TableCell>
-                                    <TableCell></TableCell>
-                                    <TableCell>
-                                        <StatusChip
-                                            status={test.status}
-                                        />
-                                    </TableCell>
-                                    <TableCell>
-                                        <ReportButton
-                                            useColor={true}
-                                            useIcon={false}
-                                            variant="contained"
-                                            label="View"
-                                            status={test.status}
-                                            to={formatForDomId([
-                                                phase.phase_name,
-                                                test.test_name
-                                            ])}
-                                        />
-                                    </TableCell>
-                                </TableRow>
-                            )
-
                             const caseRows = test.cases.map(testCase => {
                                 return (
                                     <TableRow className={rowClasses[testCase.status]}>
                                         <TableCell>{phase.phase_name}</TableCell>
                                         <TableCell>{test.test_name}</TableCell>
-                                        <TableCell>{testCase.case_name}</TableCell>
+                                        <TableCell>{testCase.case_description || testCase.log_messages[0]}</TableCell>
                                         <TableCell>
                                             <StatusChip
                                                 status={testCase.status}
@@ -114,8 +59,7 @@ const StatusTable = props => {
                                                 status={testCase.status}
                                                 to={formatForDomId([
                                                     phase.phase_name,
-                                                    test.test_name,
-                                                    testCase.case_name
+                                                    test.test_name
                                                 ])}
                                             />
                                         </TableCell>
@@ -123,11 +67,10 @@ const StatusTable = props => {
                                 )
                             })
 
-                            return [testRow, ...caseRows]
+                            return [...caseRows]
                         })
 
                         return ([
-                            phaseRow,
                             ...testAndCaseRows
                         ])
                     })}

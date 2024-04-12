@@ -7,10 +7,10 @@ const StatusAlert = props => {
 
     const text = `${props.reportLevel} Status: ${props.status}`;
     const severities = {
-        PASS: "success",
+        Compliant: "success",
         WARN: "warning",
-        FAIL: "error",
-        SKIP: "info",
+        "Non-Compliant": "error",
+        Skipped: "info",
         UNKNOWN: "error"
     }
     const widthClasses = {

@@ -20,8 +20,15 @@ import { flattenReportCases } from '../../../utils/reportUtils';
 import HelpBubble from '../../common/info/HelpBubble';
 import ReportButtonGroup from '../../common/navigation/ReportButtonGroup';
 import { simpleApiCall } from '../../../utils/apiUtils';
+import ScrollButton from '../../common/navigation/ScrollButton';
 
 const Report = props => {
+    
+    const statusMap = {
+        PASS: 'Compliant',
+        FAIL: 'Non-Compliant',
+        SKIP: 'Skipped'
+      };
 
     let { reportId } = useParams();
 
@@ -37,10 +44,27 @@ const Report = props => {
         <PageContainer>
             {report ?
                 <div>
+                    <Typography display="inline" variant="h6">Report Info</Typography>
+                    <HelpBubble
+                        message="Summary information for this test report, including
+                            the testbed that was run, the platform it was run on, and
+                            when the tests were executed."
+                    />
+                    <ReportInfoTable margin="1px"
+                        header={["Report Info Key", "Value"]}
+                        rows={[
+                            {label: "Server", value: report.input_parameters.server || report.input_parameters.url || report.input_parameters.base_url},
+                            {label: "Report ID", value: report.id},
+                            {label: "Start Time", value: formatDate(report.start_time)},
+                            {label: "End Time", value: formatDate(report.end_time)},
+                            
+                        ]}
+                    />
+
                     <Typography variant="h5">Test Report</Typography>
                     <StatusAlert
                         reportLevel="Test"
-                        status={report.status}
+                        status={statusMap[report.status]}
                         size="full"
                     />
 
@@ -57,7 +81,7 @@ const Report = props => {
                         message="Shows the status of each phase, test, and test case in
                             table format. Click the 'View' button to see the full
                             report for the corresponding test component."
-                    />
+                    /><br />
                     <Typography variant="body1">
                         <strong>Passed: </strong>
                         {report.summary.passed}
@@ -69,37 +93,9 @@ const Report = props => {
                         {report.summary.skipped}
                         <strong> Unknown: </strong>
                         {report.summary.unknown}
-                    </Typography>
+                    </Typography><br />
 
                     <StatusTable phases={report.phases} />
-
-                    <Typography display="inline" variant="h6">Report Info</Typography>
-                    <HelpBubble
-                        message="Summary information for this test report, including
-                            the testbed that was run, the platform it was run on, and
-                            when the tests were executed."
-                    />
-                    <ReportInfoTable
-                        header={["Report Info Key", "Value"]}
-                        rows={[
-                            {label: "Report ID", value: report.id},
-                            {label: "Start Time", value: formatDate(report.start_time)},
-                            {label: "End Time", value: formatDate(report.end_time)}
-                        ]}
-                    />
-
-                    <Typography display="inline" variant="h6">Input Parameters</Typography>
-                    <HelpBubble
-                        message="Input parameters provided to the testbed application."
-                    />
-                    <ReportInfoTable 
-                        header={["Param Name", "Param Value"]}
-                        rows={
-                            Object.keys(report.input_parameters).map(key => {
-                                return {label: key, value: report.input_parameters[key]}
-                            })
-                        }
-                    />
 
                     <Typography display="inline" variant="h5">Full Report</Typography>
                     <HelpBubble
@@ -136,7 +132,8 @@ const Report = props => {
             />
             {reportObj.phases.map(phase => <Phase phase={phase} />)}
             */}
-
+            <ScrollButton />
+            
         </PageContainer>
     )
 }

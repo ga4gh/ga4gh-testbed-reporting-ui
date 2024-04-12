@@ -15,11 +15,8 @@ const TestbedReportingAppBar = () => {
     return (
         <AppBar position="static" className={classes.root}>
             <Toolbar>
-                <Typography variant="h6" className={classes.heading}>
-                    <Link to='/' className={classes.link}>
-                        GA4GH Testbed
-                    </Link>
-                </Typography>
+                <img src="/logo-full-color.svg" alt="Company Logo" href='#' className={classes.logo}>
+                </img>
             </Toolbar>
         </AppBar>
     )

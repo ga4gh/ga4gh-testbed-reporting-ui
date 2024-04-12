@@ -2,8 +2,8 @@ import { makeStyles } from '@mui/styles';
 
 const testbedReportingAppBarStyles = makeStyles((theme) => ({
     root: {
-        flexGrow: 1,
-        marginBottom: 50
+        backgroundColor: '#f0f0f0',
+        borderBottom: '2px solid black',
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -15,9 +15,8 @@ const testbedReportingAppBarStyles = makeStyles((theme) => ({
         marginLeft: 20,
         marginRight: 20
     },
-    link: {
-        color: 'inherit',
-        textDecoration: 'none'
+    logo: {
+        height: 48
     }
 }));
 

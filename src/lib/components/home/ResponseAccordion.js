@@ -16,6 +16,7 @@ const ResponseAccordion = ({ reports }) => {
       {Object.keys(groupedReports).map((testbed_name) => (
         <div key={testbed_name}>
           <CustomAccordian testbedName={testbed_name} responseArray={groupedReports[testbed_name]} />
+          <br />
         </div>
       ))}
     </div>
