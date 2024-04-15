@@ -26,12 +26,21 @@ const HomeStatusChip = props => {
         UNKNOWN: <FailIcon />
     }
 
+    const chipStyles = {
+        minWidth: "120px", // Adjust the width as needed
+        textAlign: "center",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+      };
+
     return (
         <Chip
             icon={icons[props.status]}
             color={severities[props.status]}
             variant="contained"
             label={text}
+            style={chipStyles}
         />
     )
 }

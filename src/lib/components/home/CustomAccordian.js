@@ -3,9 +3,37 @@ import { Accordion, AccordionDetails, AccordionSummary, Table, TableBody, TableC
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import StatusChip from '../common/info/HomeStatusChip';
 import { Link } from 'react-router-dom';
+import { makeStyles } from '@mui/styles';
 
+const useStyles = makeStyles((theme) => ({
+  tableHeaderCell: {
+    textTransform: 'capitalize', // Capitalize the first letter of each word
+  },
+  serverNameCell: {
+    width: 200, // Set the desired width for the Server Name column
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    color: '#ffffff', // White text color for header cells
+  },
+  headerRowStyle: {
+    backgroundColor: '#6f6f6f', // Dark gray background for header row
+  },
+  cellStyle: {
+    color: '#000000', // Black text color for cells
+  },
+  serverNameCellStyle: {
+    width: '30%', // 40% width for "Server Name" column
+  },
+  otherCellStyle: {
+    width: '15%', // 15% width for other columns
+    color: '#000000', // Black text color for cells
+  },
+}));
 
 const CustomAccordion = ({ testbedName, responseArray }) => {
+  const classes = useStyles();
+
   // Sort responseArray by start_time in descending order
   const sortedReports = responseArray.sort((a, b) => new Date(b.start_time) - new Date(a.start_time));
 
@@ -46,23 +74,29 @@ const CustomAccordion = ({ testbedName, responseArray }) => {
         <TableContainer component={Paper}>
           <Table>
             <TableHead>
-              <TableRow>
-                <TableCell>Server Name</TableCell>
+              <TableRow className={classes.headerRowStyle}>
+                <TableCell className={`${classes.tableHeaderCell} ${classes.serverNameCellStyle}`} align="left">
+                  Server Name
+                </TableCell>
                 {responseArray[0].phases.map((phase) => (
-                  <TableCell key={phase.phase_name}>{phase.phase_name}</TableCell>
+                  <TableCell key={phase.phase_name} className={`${classes.tableHeaderCell} ${classes.otherCellStyle}`} align="center">
+                    {phase.phase_name}
+                  </TableCell>
                 ))}
               </TableRow>
             </TableHead>
             <TableBody>
-              {filteredReports.map((report) => (
-                <TableRow key={report.id}>
-                  <TableCell>
-                    <Link to={`/reports/${report.id}`}>
+              {filteredReports.map((report, index) => (
+                <TableRow key={report.id} style={{ backgroundColor: index % 2 === 1 ? '#ffffff' : '#f0f0f0' }}>
+                  <TableCell className={`${classes.serverNameCell} ${classes.serverNameCellStyle}`}>
+                    <Link to={`/reports/${report.id}`} className={classes.cellStyle}>
                       {report.input_parameters.server || report.input_parameters.url || report.input_parameters.base_url}
                     </Link>
                   </TableCell>
-                  {report.phases.map((phase) => (
-                    <TableCell key={phase.phase_name}><StatusChip status={statusMap[phase.status]}></StatusChip></TableCell>
+                  {report.phases.map((phase, columnIndex) => (
+                    <TableCell key={phase.phase_name} className={`${classes.otherCellStyle} ${columnIndex === 0 ? classes.serverNameCellStyle : ''}`}>
+                      <StatusChip status={statusMap[phase.status]} />
+                    </TableCell>
                   ))}
                 </TableRow>
               ))}

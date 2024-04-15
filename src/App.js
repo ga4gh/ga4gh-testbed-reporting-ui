@@ -13,8 +13,7 @@ import Platform from './lib/components/pages/Platform';
 import Report from './lib/components/pages/report/Report';
 import ReportSeries from './lib/components/pages/ReportSeries';
 import Layout from './lib/components/common/layout/Layout';
-import Header from './lib/components/common/navigation/Header.js';
-
+import ScrollButton from './lib/components/common/navigation/ScrollButton';
 
 const App = () => {
     return (
@@ -30,6 +29,7 @@ const App = () => {
                 <Route exact path='/reports/:reportId' component={Report} />
                 <Route exact path='/specifications/' component={Specifications} />
             </Switch>
+            <ScrollButton />
             <Layout />
         </div>
     )

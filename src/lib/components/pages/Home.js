@@ -11,6 +11,7 @@ import SpaceDivider from '../common/layout/SpaceDivider';
 import { simpleApiCall } from '../../utils/apiUtils';
 import ResponseAccordion from '../home/ResponseAccordion';
 import Footer from '../common/navigation/Footer.js';
+import { PixRounded } from '@mui/icons-material';
 
 const Home = props => {
 
@@ -38,15 +39,15 @@ const Home = props => {
     
     return (
         <PageContainer>
-            <Typography variant="h2">GA4GH Testbed</Typography>
+            <SpaceDivider />
+            <Typography variant="h3" style={{ textAlign: 'center' }}>GA4GH Testbed</Typography>
             <SpaceDivider />
 
             <div>
                 {reports !== null ? (
                     reports.length > 0 ? (
-                    <ResponseAccordion reports={reports} />
-                    ) : (
-                    <div>No data available</div>
+                        <ResponseAccordion reports={reports} /> ) : (
+                        <div>No data available</div>
                     )
                 ) : (
                     <div>Loading...</div>

@@ -132,7 +132,6 @@ const Report = props => {
             />
             {reportObj.phases.map(phase => <Phase phase={phase} />)}
             */}
-            <ScrollButton />
             
         </PageContainer>
     )

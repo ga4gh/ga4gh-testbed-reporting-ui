@@ -13,11 +13,16 @@ const testbedReportingAppBarStyles = makeStyles((theme) => ({
     },
     heading: {
         marginLeft: 20,
-        marginRight: 20
+        marginRight: 20,
     },
     logo: {
-        height: 48
-    }
+        height: 70
+    },
+    logoWrapper: {
+        paddingTop: theme.spacing(2),
+        paddingBottom: theme.spacing(2)
+    },
 }));
+
 
 export default testbedReportingAppBarStyles;
