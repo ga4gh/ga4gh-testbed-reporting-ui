@@ -44,7 +44,7 @@ const StatusTable = props => {
                                     <TableRow className={rowClasses[testCase.status]}>
                                         <TableCell>{phase.phase_name}</TableCell>
                                         <TableCell>{test.test_name}</TableCell>
-                                        <TableCell>{testCase.case_description || testCase.log_messages}</TableCell>
+                                        <TableCell>{test.test_description || testCase.case_description}</TableCell>
                                         <TableCell>
                                             <StatusChip
                                                 status={testCase.status}
