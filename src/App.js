@@ -14,6 +14,7 @@ import Report from './lib/components/pages/report/Report';
 import ReportSeries from './lib/components/pages/ReportSeries';
 import Layout from './lib/components/common/layout/Layout';
 import ScrollButton from './lib/components/common/navigation/ScrollButton';
+//import './App.css'; // Import the CSS file
 
 const App = () => {
     return (

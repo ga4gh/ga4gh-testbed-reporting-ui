@@ -6,6 +6,28 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
+  accordion: {
+    position: 'relative',
+    padding: theme.spacing(2),
+    boxShadow: 'none',
+  },
+  accordionContent: {
+    position: 'relative',
+    zIndex: 1,
+  },
+  background: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    zIndex: 0,
+    opacity: 0.2,
+    backgroundImage: '/logo-mark-white.svg', // Path to your background image in the public directory
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  },
   tableHeaderCell: {
     textTransform: 'capitalize', // Capitalize the first letter of each word
   },
