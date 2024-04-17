@@ -1,6 +1,8 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography } from '@mui/material';
+import { Link } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import { Link as RouterLink } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     appBar: {
@@ -57,7 +59,9 @@ const Header = () => {
     return (
         <AppBar position="static" className={classes.root}>
         <Toolbar>
-            <img src="/logo-full-color.svg" alt="Company Logo" to='#' className={classes.logo} />
+            <Link component={RouterLink} to="/" underline="none">
+                <img src="/logo-full-color.svg" alt="Company Logo" to='#' className={classes.logo} />   
+            </Link>
         </Toolbar>
         </AppBar>
     );

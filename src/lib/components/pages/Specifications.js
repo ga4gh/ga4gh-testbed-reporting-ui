@@ -20,7 +20,7 @@ const Specifications = () => {
       subItems: [
         { id: 21, name: 'RNAget API specification', url: 'https://github.com/ga4gh-rnaseq/schema/blob/master/rnaget-openapi.yaml' },
         { id: 22, name: 'RNAget compliance documentation', url: 'https://rnaget-compliance-suite.readthedocs.io/en/latest/' },
-        { id: 22, name: 'RNAget compliance application', url: 'https://github.com/ga4gh-rnaseq/rnaget-compliance-suite' },
+        { id: 23, name: 'RNAget compliance application', url: 'https://github.com/ga4gh-rnaseq/rnaget-compliance-suite' },
       ]
     },
   ];
