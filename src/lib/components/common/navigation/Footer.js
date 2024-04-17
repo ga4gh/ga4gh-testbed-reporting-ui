@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     marginRight: theme.spacing(2),
-    fontWeight: 'bold', // Strong font weight
+    color: 'white',
   },
 }));
 
@@ -46,7 +46,7 @@ const Footer = () => {
         |{' '}
         <Link className={classes.link} color="inherit" component={RouterLink} to={"/specifications/"} target="_blank" rel="noopener noreferrer">
           Specifications 
-        </Link>
+        </Link>{' '}
         |{' '}
         <a
             className={classes.link}
