@@ -24,8 +24,11 @@ const useStyles = makeStyles((theme) => ({
 
 const Footer = () => {
   const classes = useStyles();
-  const serverName = process.env.REACT_APP_TESTBED_API_BASE_URL || 'localhost:3000';
   const specificationsPath = `/specifications/`;
+  const handleSpecificationsClick = () => {
+    // Redirect to specifications.html
+    window.location.href = 'src/lib/components/pages/specs.html';
+  };
 
   return (
     <footer className={classes.root}>
@@ -41,7 +44,7 @@ const Footer = () => {
           Support
         </Link>{' '}
         |{' '}
-        <Link className={classes.link} color="inherit" component={RouterLink} to={specificationsPath} target="_blank" rel="noopener noreferrer">
+        <Link className={classes.link} color="inherit" component={RouterLink} to={"/specifications"} target="_blank" rel="noopener noreferrer">
           Specifications
         </Link>
       </Typography>

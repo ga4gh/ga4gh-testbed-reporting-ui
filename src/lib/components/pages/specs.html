@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Specifications</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      color: #333333;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .sub-items {
+      margin-left: 20px;
+    }
+    .item-link {
+      font-weight: bold;
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Specifications</h1>
+  <ul id="items-list">
+    <!-- JavaScript will populate this list -->
+  </ul>
+
+  <script>
+    const items = [
+      { 
+        id: 1, 
+        name: 'Refget Compliance Suite', 
+        subItems: [
+          { id: 11, name: 'Refget API specification', url: 'https://samtools.github.io/hts-specs/refget.html' },
+          { id: 12, name: 'Refget Compliance documentation', url: 'https://compliancedoc.readthedocs.io/' },
+          { id: 13, name: 'Refget Compliance tool', url: 'https://github.com/ga4gh/refget-compliance-suite' },
+        ]
+      },
+      { 
+        id: 2, 
+        name: 'RNAget Compliance Suite', 
+        subItems: [
+          { id: 21, name: 'RNAget API specification', url: 'https://github.com/ga4gh-rnaseq/schema/blob/master/rnaget-openapi.yaml' },
+          { id: 22, name: 'RNAget compliance documentation', url: 'https://rnaget-compliance-suite.readthedocs.io/en/latest/' },
+          { id: 23, name: 'RNAget compliance application', url: 'https://github.com/ga4gh-rnaseq/rnaget-compliance-suite' },
+        ]
+      },
+    ];
+
+    const itemsList = document.getElementById('items-list');
+
+    items.forEach(item => {
+      const listItem = document.createElement('li');
+      const itemLink = document.createElement('a');
+      itemLink.textContent = item.name;
+      itemLink.href = '#';
+      itemLink.classList.add('item-link');
+
+      itemLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        toggleSubItems(listItem, item.subItems);
+      });
+
+      listItem.appendChild(itemLink);
+      itemsList.appendChild(listItem);
+    });
+
+    function toggleSubItems(parent, subItems) {
+      const subList = parent.querySelector('ul');
+      if (!subList) {
+        const newSubList = document.createElement('ul');
+        newSubList.classList.add('sub-items');
+        subItems.forEach(subItem => {
+          const subItemLi = document.createElement('li');
+          const subItemLink = document.createElement('a');
+          subItemLink.textContent = subItem.name;
+          subItemLink.href = subItem.url;
+          subItemLink.target = '_blank';
+          subItemLink.rel = 'noopener noreferrer';
+          subItemLi.appendChild(subItemLink);
+          newSubList.appendChild(subItemLi);
+        });
+        parent.appendChild(newSubList);
+      } else {
+        subList.remove();
+      }
+    }
+  </script>
+</body>
+</html>
