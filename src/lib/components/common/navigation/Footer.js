@@ -44,9 +44,18 @@ const Footer = () => {
           Support
         </Link>{' '}
         |{' '}
-        <Link className={classes.link} color="inherit" component={RouterLink} to={"/specifications"} target="_blank" rel="noopener noreferrer">
-          Specifications
+        <Link className={classes.link} color="inherit" component={RouterLink} to={"/specifications/"} target="_blank" rel="noopener noreferrer">
+          Specifications 
         </Link>
+        |{' '}
+        <a
+            className={classes.link}
+            href="/specifications/" // Path to your specifications route
+            target="_blank" // If you want to open in a new tab
+            rel="noopener noreferrer"
+          >
+            Specifications
+          </a>
       </Typography>
     </footer>
   );
