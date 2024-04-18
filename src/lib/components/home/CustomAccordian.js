@@ -6,6 +6,11 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
+  headerHeadColor: {
+    "& .MuiTableCell-head": {
+      color: "white",
+    },
+  },
   serverNameCell: {
     width: 200,
     overflow: 'hidden',
@@ -15,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   headerRowStyle: {
     backgroundColor: '#3f3f3f',
     fontWeight: 'bold',
-    textTransform: 'capitalize',
+    textTransform: 'capitalize'
   },
   cellStyle: {
     color: '#000000',
@@ -72,7 +77,7 @@ const CustomAccordion = ({ testbedName, responseArray }) => {
         <TableContainer component={Paper}>
           <Table>
             <TableHead>
-              <TableRow className={ `Table-header ${classes.headerRowStyle}`}>
+              <TableRow className={`${classes.headerHeadColor} ${classes.headerRowStyle}`}  >
                 <TableCell align="left">
                   Server Name
                 </TableCell>
