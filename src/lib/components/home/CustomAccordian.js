@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
   },
   headerRowStyle: {
     backgroundColor: '#3f3f3f',
-    color: theme.palette.common.white,
     fontWeight: 'bold',
     textTransform: 'capitalize',
   },
@@ -73,12 +72,12 @@ const CustomAccordion = ({ testbedName, responseArray }) => {
         <TableContainer component={Paper}>
           <Table>
             <TableHead>
-              <TableRow className={classes.headerRowStyle}>
-                <TableCell  className={classes.headerRowStyle} align="left">
+              <TableRow className={ `headerFontColor ${classes.headerRowStyle}`}  style={{ color: '#ffffff !important;' }} >
+                <TableCell align="left">
                   Server Name
                 </TableCell>
                 {responseArray[0].phases.map((phase) => (
-                  <TableCell  className={classes.headerRowStyle} key={phase.phase_name} align="center">
+                  <TableCell key={phase.phase_name} align="center">
                     {phase.phase_name}
                   </TableCell>
                 ))}

@@ -24,6 +24,10 @@
   color: white;
 }
 
+.headerFontColor {
+  color: #ffffff !important;
+}
+
 .App-link {
   color: #61dafb;
 }

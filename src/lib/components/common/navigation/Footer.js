@@ -18,17 +18,12 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     marginRight: theme.spacing(2),
-    color: 'white',
+    color: theme.palette.common.white,
   },
 }));
 
 const Footer = () => {
   const classes = useStyles();
-  const specificationsPath = `/specifications/`;
-  const handleSpecificationsClick = () => {
-    // Redirect to specifications.html
-    window.location.href = 'src/lib/components/pages/specs.html';
-  };
 
   return (
     <footer className={classes.root}>
@@ -50,8 +45,8 @@ const Footer = () => {
         |{' '}
         <a
             className={classes.link}
-            href="/specifications/" // Path to your specifications route
-            target="_blank" // If you want to open in a new tab
+            href="/specifications/"
+            target="_blank"
             rel="noopener noreferrer"
           >
             Specifications
