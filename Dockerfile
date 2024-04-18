@@ -13,7 +13,8 @@ RUN npm install
 COPY .env.development .env.production
 COPY public public
 COPY src src
-RUN npm run reactBuild
+#RUN npm run reactBuild
+RUN npm run reactCleanBuild
 RUN chmod 777 /usr/local/bin/docker-entrypoint.sh \
     && ln -s /usr/local/bin/docker-entrypoint.sh /
 

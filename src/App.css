@@ -24,6 +24,12 @@
   color: white;
 }
 
+.Table-header {
+  background-color: #282c34;
+  align-items: center;
+  color: white !important;
+}
+
 .headerFontColor {
   color: #ffffff !important;
 }
@@ -42,7 +48,7 @@
 }
 
 body {
-  background-image: url(/ogo-mark-white.svg);/* Path to your background image in the public directory */
+  background-image: url(/logo-mark-white.svg);/* Path to your background image in the public directory */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

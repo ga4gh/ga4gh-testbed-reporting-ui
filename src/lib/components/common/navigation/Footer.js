@@ -39,13 +39,13 @@ const Footer = () => {
           Support
         </Link>{' '}
         |{' '}
-        <Link className={classes.link} color="inherit" component={RouterLink} to={"/specifications/"} target="_blank" rel="noopener noreferrer">
+        <Link className={classes.link} color="inherit" component={RouterLink} to={`/specifications`} target="_blank" rel="noopener noreferrer">
           Specifications 
         </Link>{' '}
         |{' '}
         <a
             className={classes.link}
-            href="/specifications/"
+            href="/specifications"
             target="_blank"
             rel="noopener noreferrer"
           >

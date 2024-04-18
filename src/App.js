@@ -28,7 +28,7 @@ const App = () => {
                 <Route exact path='/platforms/:platformId' component={Platform} />
                 <Route exact path='/report-series/:reportSeriesId' component={ReportSeries} />
                 <Route exact path='/reports/:reportId' component={Report} />
-                <Route path='/specifications/' component={Specifications} />
+                <Route exact path='/specifications' component={Specifications} />
             </Switch>
             <ScrollButton />
             <Layout />
