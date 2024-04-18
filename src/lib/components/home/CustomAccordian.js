@@ -72,7 +72,7 @@ const CustomAccordion = ({ testbedName, responseArray }) => {
         <TableContainer component={Paper}>
           <Table>
             <TableHead>
-              <TableRow className={ `headerFontColor ${classes.headerRowStyle}`}  style={{ color: '#ffffff !important;' }} >
+              <TableRow className={ `Table-header ${classes.headerRowStyle}`}>
                 <TableCell align="left">
                   Server Name
                 </TableCell>
