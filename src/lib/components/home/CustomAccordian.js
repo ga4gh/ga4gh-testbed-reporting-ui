@@ -6,11 +6,6 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
-  headerHeadColor: {
-    "& .MuiTableCell-head": {
-      color: "white",
-    },
-  },
   serverNameCell: {
     width: 200,
     overflow: 'hidden',
@@ -18,9 +13,12 @@ const useStyles = makeStyles((theme) => ({
     whiteSpace: 'nowrap',
   },
   headerRowStyle: {
-    backgroundColor: '#3f3f3f',
+    backgroundColor: '#1c75bb',
+  },
+  headerRowTextStyle: {
     fontWeight: 'bold',
-    textTransform: 'capitalize'
+    color: '#f8f8f8',
+    textTransform: 'capitalize',
   },
   cellStyle: {
     color: '#000000',
@@ -77,13 +75,13 @@ const CustomAccordion = ({ testbedName, responseArray }) => {
         <TableContainer component={Paper}>
           <Table>
             <TableHead>
-              <TableRow className={`${classes.headerHeadColor} ${classes.headerRowStyle}`}  >
-                <TableCell align="left">
-                  Server Name
+              <TableRow className={classes.headerRowStyle}>
+                <TableCell  className={classes.headerRowStyle} align="left">
+                  <Typography className={classes.headerRowTextStyle}>Server Name</Typography>
                 </TableCell>
                 {responseArray[0].phases.map((phase) => (
-                  <TableCell key={phase.phase_name} align="center">
-                    {phase.phase_name}
+                  <TableCell  className={classes.headerRowStyle} key={phase.phase_name} align="center">
+                    <Typography className={classes.headerRowTextStyle}>{phase.phase_name}</Typography>
                   </TableCell>
                 ))}
               </TableRow>

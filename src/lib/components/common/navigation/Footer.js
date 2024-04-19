@@ -35,22 +35,13 @@ const Footer = () => {
           About Us
         </Link>{' '}
         |{' '}
-        <Link className={classes.link} color="inherit" href="#" target="_blank" rel="noopener noreferrer">
+        <Link className={classes.link} color="inherit" href="https://ga4gh.github.io/ga4gh-testbed-ui/support" target="_blank" rel="noopener noreferrer">
           Support
         </Link>{' '}
         |{' '}
-        <Link className={classes.link} color="inherit" component={RouterLink} to={`/specifications`} target="_blank" rel="noopener noreferrer">
+        <Link className={classes.link} color="inherit" href="https://ga4gh.github.io/ga4gh-testbed-ui/specifications" target="_blank" rel="noopener noreferrer">
           Specifications 
-        </Link>{' '}
-        |{' '}
-        <a
-            className={classes.link}
-            href="/specifications"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Specifications
-          </a>
+        </Link>
       </Typography>
     </footer>
   );
