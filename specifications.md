@@ -21,4 +21,6 @@
 
 ### DRS Compliance Suite
 
+  - [DRS API Specification](https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.2.0/docs/)
+
   - [DRS Compliance Suite](https://github.com/ga4gh/drs-compliance-suite)
