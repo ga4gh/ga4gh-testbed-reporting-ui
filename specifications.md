@@ -4,18 +4,18 @@
 
 ### Refget Compliance Suite
 
-  - [Refget API specification](https://samtools.github.io/hts-specs/refget.html)
+  - [Refget API Specification](https://samtools.github.io/hts-specs/refget.html)
   
-  - [Refget Compliance documentation](https://compliancedoc.readthedocs.io/)
+  - [Refget Compliance Documentation](https://compliancedoc.readthedocs.io/)
 
   - [Refget Compliance Suite](https://github.com/ga4gh/refget-compliance-suite)
 
 
 ### RNAget Compliance Suite
 
-  - [RNAget API specification](https://github.com/ga4gh-rnaseq/schema/blob/master/rnaget-openapi.yaml)
+  - [RNAget API Specification](https://github.com/ga4gh-rnaseq/schema/blob/master/rnaget-openapi.yaml)
 
-  - [RNAget compliance documentation](https://rnaget-compliance-suite.readthedocs.io/en/latest/)
+  - [RNAget Compliance Documentation](https://rnaget-compliance-suite.readthedocs.io/en/latest/)
 
   - [RNAget Compliance Suite](https://github.com/ga4gh-rnaseq/rnaget-compliance-suite)
 
