@@ -8,7 +8,7 @@
   
   - [Refget Compliance documentation](https://compliancedoc.readthedocs.io/)
 
-  - [Refget Compliance tool](https://github.com/ga4gh/refget-compliance-suite)
+  - [Refget Compliance Suite](https://github.com/ga4gh/refget-compliance-suite)
 
 
 ### RNAget Compliance Suite
@@ -17,4 +17,8 @@
 
   - [RNAget compliance documentation](https://rnaget-compliance-suite.readthedocs.io/en/latest/)
 
-  - [RNAget compliance application](https://github.com/ga4gh-rnaseq/rnaget-compliance-suite)
+  - [RNAget Compliance Suite](https://github.com/ga4gh-rnaseq/rnaget-compliance-suite)
+
+### DRS Compliance Suite
+
+  - [DRS Compliance Suite](https://github.com/ga4gh/drs-compliance-suite)
