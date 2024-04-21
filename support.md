@@ -5,14 +5,6 @@
 <html>
     <head>
         <title>GA4GH Testbed Help</title>
-        <style>figure figcaption {
-            text-align: center;
-            font-style: italic;
-          }
-          .left, .right {
-            display: inline-block;
-            }
-        </style>
     </head>
     <body>
         <h1><div class="title" id="title">GA4GH Testbed Infrastructure User Manual</h1></div>
