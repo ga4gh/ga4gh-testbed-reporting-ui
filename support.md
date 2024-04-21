@@ -3,9 +3,6 @@
 # Support
 
 <html>
-    <head>
-        <title>GA4GH Testbed Help</title>
-    </head>
     <body>
         <h1><div class="title" id="title">GA4GH Testbed Infrastructure User Manual</h1></div>
         <hr>
