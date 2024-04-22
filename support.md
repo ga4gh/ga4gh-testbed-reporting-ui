@@ -84,5 +84,5 @@
         </div><b><a href="#title">Back to top</a>  
         <hr>
         <div class="support" id="support"><h2>Support Centre</h2>
-            For any issues related to the testbed infrastructure, you can get in touch with the GA4GH Tech Team. They are reachable via email on <a href=mailto:"ga4gh-tech-team@ga4gh.org"?subject=Query%20on%20the%20testbed%20infrastructure">ga4gh-tech-team@ga4gh.org. Additionally, note that the registration of new implementer servers and any future enhancement ideas / features can be shared to the Tech Team for consideration and collaboration. 
+            For any issues related to the testbed infrastructure, you can get in touch with the GA4GH Tech Team. They are reachable via email on <a href=mailto:"ga4gh-tech-team@ga4gh.org"?subject=Query%20on%20the%20testbed%20infrastructure">ga4gh-tech-team@ga4gh.org </a>. Additionally, note that the registration of new implementer servers and any future enhancement ideas / features can be shared to the Tech Team for consideration and collaboration. 
         </div><br><b><a href="#title">Back to top</a>
