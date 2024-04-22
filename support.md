@@ -26,7 +26,7 @@
         <hr>
         <div class="parts" id="parts"><h2>Technical Components</h2>
             <figure>
-                <img src="/Users/jimmy/Documents/testbed/Connect2024-Demo-arch.png" alt="Testbed tech stack" width="1000" height="500" >
+                <img src="/static/Connect2024-Demo-arch.png" alt="Testbed tech stack" width="1000" height="500" >
                 <figcaption text-align="centre">Fig 1. Testbed Infrastructure technical stack</figcaption>
              </figure>
             The technical stack of the testbed infrastructure is deployed on AWS. The different parts of the stack are - <br>
@@ -45,12 +45,12 @@
             Developers / implementers of GA4GH standards can submit the reports generated from their respective compliance testbeds into the testbed infrastructure for valdiation and get their implementations badged. Please note that for submitting reports into the testbed infrastructure a registration process exists. For more details on the process, please refer the <a href="#support">support</a> section. <br>
             Once the compliance testbeds are set up and registration is completed, compliance reports (payload) can be uploaded into the testbed through a simple command. Due to the online deployment instance of the testbed infrastructure, developers / implementers <i><b>do not</b></i> need to download or deploy a local version of the testbed infrastructure. The command to be used, its syntax and explanation on the command's different parameters / flags are provided below. 
             <figure>
-                <img src="/Users/jimmy/Documents/testbed/submission-command-terminal.png" alt="Submission terminal" width="1000" height="500" >
+                <img src="/static/submission-command-terminal.png" alt="Submission terminal" width="1000" height="500" >
                 <figcaption text-align="centre">Fig 2. Submission terminal command output</figcaption>
              </figure>
              Below is an example of executing the submission command for a registered compliance testbed. 
              <figure>
-                <img src="/Users/jimmy/Documents/testbed/render1713697537103.gif" alt="Submission execution" width="1000" height="500" >
+                <img src="/static/render1713697537103.gif" alt="Submission execution" width="1000" height="500" >
                 <figcaption text-align="centre">Fig 3. Submission terminal execution</figcaption>
              </figure>
              Syntax of the command. Example here considers "<i>refget compliance testbed</i>".<br><br>
@@ -66,11 +66,11 @@
         <div class="validation" id="validation"><h2>Schema Validation</h2>
             The testbed infrastructure validates the submitted reports (payload) for the standards implemented on the respective implementer servers. For the validation, schemas are used. The schemas are the templates used to compare and trigger testing of the different standards implementations in the implementer servers. This process would usually take some time (few minutes) as the infrastructure validates the reports through all the phases. On a high-level, the incoming schema is validated against the defined schema in the testbed infrastructure. The payload is expected to contain certain mandatory fields to be successfully evaluated. If the fields are missing, the validation would fail. Please note that the fields in compliance testbeds are mapped during the registration process. <br>
             <figure class="left">
-                <img src="/Users/jimmy/Documents/testbed/field-mapping.png" alt="Schema fields" width="500" height="500" >
+                <img src="/static/field-mapping.png" alt="Schema fields" width="500" height="500" >
                 <figcaption text-align="centre">Fig 4. Fields mapped in schema</figcaption>
              </figure>
              <figure class="right">
-                <img src="/Users/jimmy/Documents/testbed/schema-required-fields.png" alt="Schema mandatory" width="500" height="500" >
+                <img src="/static/schema-required-fields.png" alt="Schema mandatory" width="500" height="500" >
                 <figcaption text-align="centre">Fig 5. Mandatory fields in schema</figcaption>
              </figure>
         </div><b><a href="#title">Back to top</b></a>
@@ -78,7 +78,7 @@
         <div class="ui" id="ui"><h2>The UI - viewing reports</h2>
             After a report is submitted, developers and users can view the outcome of the validation on the testbed infrastructure on the UI. The UI is hosted on AWS and can be accessed using a URL. This is publicly accessible URL and currently, there are no authentication or authorization mechanism in place although when implemented in the future the developers would be informed on how they can register for unique credentials. The UI is intuitive and provides aggregated information on the reports submitted, grouped together on the standards for which it was evaluated. All the implementer servers which implemented the standards would be listed under the respective aggregated grouping. The UI also provides links to access more information on GA4GH, the specifications validated so far from reports submitted, and a help document.<br><br>
             <figure>
-                <img src="/Users/jimmy/Documents/testbed/the-testbed-ui.png" alt="Testbed UI" width="1000" height="500" >
+                <img src="/static/the-testbed-ui.png" alt="Testbed UI" width="1000" height="500" >
                 <figcaption text-align="centre"><br>Fig 6. Testbed UI</figcaption>
              </figure> 
         </div><b><a href="#title">Back to top</b></a>  
