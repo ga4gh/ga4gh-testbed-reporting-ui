@@ -1,7 +1,7 @@
 # <img src="https://www.ga4gh.org/wp-content/themes/ga4gh/dist/assets/svg/logos/logo-full-color.svg" alt="GA4GH Logo" style="width: 400px;"/>
 <html>
     <body>
-        <h1><div class="title" id="title">GA4GH Testbed Infrastructure User Manual</h1></div>
+        <h1><div class="title" id="title">GA4GH Testbed Infrastructure User Manual</div></h1>
         <hr>
         <ul>
             <li><a href="#intro">Introduction</a></li><br>
