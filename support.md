@@ -22,7 +22,7 @@
             A monitoring system will alert the technical team and any relevant stakeholders of any unexpected testbed failures in the network of web services. Before failed reports are published on the public site, stakeholders will have a grace period, during which they can access a staging area to review and correct the reasons for failure without the failure becoming visible to the public.
             <br><br>
             The technical stack will be deployed on Amazon Web Services (AWS) cloud infrastructure and supported by the GA4GH Technical Team.<br><br>
-        </div><b><a href="#title">Back to top</b></a>
+        </div><b><a href="#title">Back to top</a>
         <hr>
         <div class="parts" id="parts"><h2>Technical Components</h2>
             <figure>
@@ -39,7 +39,7 @@
                 <li><b>Testbed API (backend)</b> - The API of the testbed infrastructure is the core processing engine which intakes the reports submitted by the implementation servers and runs the validation process to mark each submission as "<i>Compliant</i>" or "<i>Non-compliant</i>". </li><br>
                 <li><b>Docker Hub</b> - Docker Hub is used to implement the continuous integration and deployment pipeline. The images of the UI and API are created and deployed on Docker Hub, making it easier for developers to download and use the build images without configuration on local systems. </li><br>
             </ul>
-        </div><b><a href="#title">Back to top</b></a>
+        </div><b><a href="#title">Back to top</a>
         <hr>
         <div class="submission" id="submission"><h2>Submission Process</h2>
             Developers / implementers of GA4GH standards can submit the reports generated from their respective compliance testbeds into the testbed infrastructure for valdiation and get their implementations badged. Please note that for submitting reports into the testbed infrastructure a registration process exists. For more details on the process, please refer the <a href="#support">support</a> section. <br>
@@ -61,7 +61,7 @@
                 <li><code>--submit-url</code>: The testbed infrastructure server evaluating the submitted reports (payloads) for the implemented standards and generating a compliance status. Optional</li><br>
                 <li><code>--submit</code>: Keyword to trigger the submission of the submitted report and generate a validation output which would report the compliance status. If this keyword isn't specified, the testbed infrastructure would accept the payload but wouldn't generate a compliance status report. Mandatory </li><br>
              </ul>
-        </div><b><a href="#title">Back to top</b></a>
+        </div><b><a href="#title">Back to top</a>
         <hr>
         <div class="validation" id="validation"><h2>Schema Validation</h2>
             The testbed infrastructure validates the submitted reports (payload) for the standards implemented on the respective implementer servers. For the validation, schemas are used. The schemas are the templates used to compare and trigger testing of the different standards implementations in the implementer servers. This process would usually take some time (few minutes) as the infrastructure validates the reports through all the phases. On a high-level, the incoming schema is validated against the defined schema in the testbed infrastructure. The payload is expected to contain certain mandatory fields to be successfully evaluated. If the fields are missing, the validation would fail. Please note that the fields in compliance testbeds are mapped during the registration process. <br>
@@ -73,7 +73,7 @@
                 <img src="/static/schema-required-fields.png" alt="Schema mandatory" width="500" height="500" >
                 <figcaption text-align="centre">Fig 5. Mandatory fields in schema</figcaption>
              </figure>
-        </div><b><a href="#title">Back to top</b></a>
+        </div><b><a href="#title">Back to top</a>
         <hr>
         <div class="ui" id="ui"><h2>The UI - viewing reports</h2>
             After a report is submitted, developers and users can view the outcome of the validation on the testbed infrastructure on the UI. The UI is hosted on AWS and can be accessed using a URL. This is publicly accessible URL and currently, there are no authentication or authorization mechanism in place although when implemented in the future the developers would be informed on how they can register for unique credentials. The UI is intuitive and provides aggregated information on the reports submitted, grouped together on the standards for which it was evaluated. All the implementer servers which implemented the standards would be listed under the respective aggregated grouping. The UI also provides links to access more information on GA4GH, the specifications validated so far from reports submitted, and a help document.<br><br>
@@ -81,10 +81,8 @@
                 <img src="/static/the-testbed-ui.png" alt="Testbed UI" width="1000" height="500" >
                 <figcaption text-align="centre"><br>Fig 6. Testbed UI</figcaption>
              </figure> 
-        </div><b><a href="#title">Back to top</b></a>  
+        </div><b><a href="#title">Back to top</a>  
         <hr>
         <div class="support" id="support"><h2>Support Centre</h2>
-            For any issues related to the testbed infrastructure, you can get in touch with the GA4GH Tech Team. They are reachable via email on <a href=mailto:"ga4gh-tech-team@ga4gh.org"?subject=Query%20on%20the%20testbed%20infrastructure">ga4gh-tech-team@ga4gh.org</a>. Additionally, note that the registration of new implementer servers and any future enhancement ideas / features can be shared to the Tech Team for consideration and collaboration. 
-        </div><br><b><a href="#title">Back to top</b></a>
-    </body>
-</html>
+            For any issues related to the testbed infrastructure, you can get in touch with the GA4GH Tech Team. They are reachable via email on <a href=mailto:"ga4gh-tech-team@ga4gh.org"?subject=Query%20on%20the%20testbed%20infrastructure">ga4gh-tech-team@ga4gh.org. Additionally, note that the registration of new implementer servers and any future enhancement ideas / features can be shared to the Tech Team for consideration and collaboration. 
+        </div><br><b><a href="#title">Back to top</a>
