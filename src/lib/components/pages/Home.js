@@ -14,6 +14,7 @@ import Footer from '../common/navigation/Footer.js';
 import { PixRounded } from '@mui/icons-material';
 
 const Home = props => {
+    /*
     let { platformId } = useParams();
 
     let [platform, setPlatform] = useState(null);
@@ -27,6 +28,7 @@ const Home = props => {
     useEffect(() => {
         simpleApiCall(apiUrl, setPlatform, setErrPlatform);
     }, [apiUrl]);
+    */
 
     /*
     let [specifications, setSpecifications] = useState([]);
@@ -38,7 +40,7 @@ const Home = props => {
     let [platforms, setPlatforms] = useState([]);
     let [errPlatforms, setErrPlatforms] = useState(null);
     */
-    /*
+    
     let [reports, setReports] = useState([]);
     let [errReports, setErrReports] = useState(null);
 
@@ -50,7 +52,7 @@ const Home = props => {
     //useEffect(() => simpleApiCall(`${baseUrl}:${basePort}/organizations`, setOrganizations, setErrOrganizations), []);
     //useEffect(() => simpleApiCall(`${baseUrl}:${basePort}/platforms`, setPlatforms, setErrPlatforms), []);
     useEffect(() => simpleApiCall(`${baseUrl}:${basePort}/reports`, setReports, setErrReports), []);
-    */
+    
     return (
         <PageContainer>
             <SpaceDivider />
