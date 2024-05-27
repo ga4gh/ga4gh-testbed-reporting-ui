@@ -51,7 +51,8 @@ const Home = props => {
     //useEffect(() => simpleApiCall(`${baseUrl}:${basePort}/testbeds`, setTestbeds, setErrTestbeds), []);
     //useEffect(() => simpleApiCall(`${baseUrl}:${basePort}/organizations`, setOrganizations, setErrOrganizations), []);
     //useEffect(() => simpleApiCall(`${baseUrl}:${basePort}/platforms`, setPlatforms, setErrPlatforms), []);
-    useEffect(() => simpleApiCall(`${baseUrl}:${basePort}/reports`, setReports, setErrReports), []);
+    //useEffect(() => simpleApiCall(`${baseUrl}:${basePort}/reports`, setReports, setErrReports), []);
+    useEffect(() => simpleApiCall(`${baseUrl}/reports`, setReports, setErrReports), []);
     
     return (
         <PageContainer>
