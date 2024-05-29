@@ -30,11 +30,13 @@ const Home = props => {
 
     let baseUrl = process.env.REACT_APP_TESTBED_API_BASE_URL
     let basePort = process.env.REACT_APP_TESTBED_API_BASE_PORT
+    let env = process.env.REACT_APP_DEPLOYMENT_ENV;
 
     //useEffect(() => simpleApiCall(`${baseUrl}/specifications`, setSpecifications, setErrSpecifications), []);
     //useEffect(() => simpleApiCall(`${baseUrl}/testbeds`, setTestbeds, setErrTestbeds), []);
     //useEffect(() => simpleApiCall(`${baseUrl}/organizations`, setOrganizations, setErrOrganizations), []);
     //useEffect(() => simpleApiCall(`${baseUrl}/platforms`, setPlatforms, setErrPlatforms), []);
+    
     useEffect(() => simpleApiCall(`${baseUrl}/reports`, setReports, setErrReports), []);
     
     return (

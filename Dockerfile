@@ -10,7 +10,8 @@ COPY package.json package.json
 COPY package-lock.json package-lock.json
 RUN npm install
 
-COPY .env.development .env.production
+COPY .env.development .env.development
+COPY .env.production .env.production
 COPY public public
 COPY src src
 #RUN npm run reactBuild
