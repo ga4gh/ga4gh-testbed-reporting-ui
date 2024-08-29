@@ -32,7 +32,7 @@ const Footer = () => {
       </Typography>
       <Typography variant="body2" className={classes.link}>
         <Link className={classes.link} color="inherit" href="https://www.ga4gh.org/about-us/ga4gh-inc/" target="_blank" rel="noopener noreferrer">
-          About Us
+          About GA4GH
         </Link>{' '}
         |{' '}
         <Link className={classes.link} color="inherit" href="https://ga4gh.github.io/ga4gh-testbed-ui/support" target="_blank" rel="noopener noreferrer">
