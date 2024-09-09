@@ -34,4 +34,4 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Start Services
-        run: docker-compose up -d
+        run: docker compose up -d
