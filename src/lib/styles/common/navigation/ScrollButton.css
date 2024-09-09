@@ -1,0 +1,31 @@
+.scroll-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+
+    background-color: #007bff; /* Nice blue color */
+    border: none;
+    color: white; /* White text */
+    padding: 10px 10px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px; /* Rounded corners */
+}
+
+.scroll-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+  
+.scroll-button.visible {
+    opacity: 1;
+    visibility: visible;
+}
+  
