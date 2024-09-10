@@ -22,6 +22,7 @@ RUN chmod 777 /usr/local/bin/docker-entrypoint.sh \
 # Final
 FROM nginx:stable-alpine
 COPY --from=builder /app/build /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # Copy entrypoint script
 COPY entrypoint.sh /entrypoint.sh
