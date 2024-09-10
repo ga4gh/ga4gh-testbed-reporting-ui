@@ -1,1 +1,1 @@
-export DOCKER_IMG_VER=0.2.0
+export DOCKER_IMG_VER=0.2.3-dev
