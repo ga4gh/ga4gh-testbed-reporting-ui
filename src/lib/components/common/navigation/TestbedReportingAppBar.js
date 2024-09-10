@@ -16,7 +16,7 @@ const TestbedReportingAppBar = () => {
         <AppBar position="static" className={classes.root} color="inherit">
         <Toolbar>
         <div className={classes.logoWrapper}>
-          <a href="http://localhost:3000"> {/* Link to localhost:3000 */}
+          <a href="/"> {/* Link to localhost:3000 */}
             <img
               src="/logo-full-color.svg"
               alt="Company Logo"

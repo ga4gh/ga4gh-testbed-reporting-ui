@@ -6,50 +6,29 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
-  accordion: {
-    position: 'relative',
-    padding: theme.spacing(2),
-    boxShadow: 'none',
-  },
-  accordionContent: {
-    position: 'relative',
-    zIndex: 1,
-  },
-  background: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    zIndex: 0,
-    opacity: 0.2,
-    backgroundImage: '/logo-mark-white.svg', // Path to your background image in the public directory
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  },
-  tableHeaderCell: {
-    textTransform: 'capitalize', // Capitalize the first letter of each word
-  },
   serverNameCell: {
-    width: 200, // Set the desired width for the Server Name column
+    width: 200,
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-    color: '#ffffff', // White text color for header cells
   },
   headerRowStyle: {
-    backgroundColor: '#6f6f6f', // Dark gray background for header row
+    backgroundColor: '#1c75bb',
+  },
+  headerRowTextStyle: {
+    fontWeight: 'bold',
+    color: '#f8f8f8',
+    textTransform: 'capitalize',
   },
   cellStyle: {
-    color: '#000000', // Black text color for cells
+    color: '#000000',
   },
   serverNameCellStyle: {
-    width: '30%', // 40% width for "Server Name" column
+    width: '30%',
   },
   otherCellStyle: {
-    width: '15%', // 15% width for other columns
-    color: '#000000', // Black text color for cells
+    width: '15%',
+    color: '#000000',
   },
 }));
 
@@ -97,12 +76,12 @@ const CustomAccordion = ({ testbedName, responseArray }) => {
           <Table>
             <TableHead>
               <TableRow className={classes.headerRowStyle}>
-                <TableCell className={`${classes.tableHeaderCell} ${classes.serverNameCellStyle}`} align="left">
-                  Server Name
+                <TableCell  className={classes.headerRowStyle} align="left">
+                  <Typography className={classes.headerRowTextStyle}>Server Name</Typography>
                 </TableCell>
                 {responseArray[0].phases.map((phase) => (
-                  <TableCell key={phase.phase_name} className={`${classes.tableHeaderCell} ${classes.otherCellStyle}`} align="center">
-                    {phase.phase_name}
+                  <TableCell  className={classes.headerRowStyle} key={phase.phase_name} align="center">
+                    <Typography className={classes.headerRowTextStyle}>{phase.phase_name}</Typography>
                   </TableCell>
                 ))}
               </TableRow>
@@ -110,7 +89,7 @@ const CustomAccordion = ({ testbedName, responseArray }) => {
             <TableBody>
               {filteredReports.map((report, index) => (
                 <TableRow key={report.id} style={{ backgroundColor: index % 2 === 1 ? '#ffffff' : '#f0f0f0' }}>
-                  <TableCell className={`${classes.serverNameCell} ${classes.serverNameCellStyle}`}>
+                  <TableCell className={classes.serverNameCell}>
                     <Link to={`/reports/${report.id}`} className={classes.cellStyle}>
                       {report.input_parameters.server || report.input_parameters.url || report.input_parameters.base_url}
                     </Link>

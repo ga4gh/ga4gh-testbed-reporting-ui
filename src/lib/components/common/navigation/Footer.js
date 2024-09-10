@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     marginRight: theme.spacing(2),
-    fontWeight: 'bold', // Strong font weight
+    color: theme.palette.common.white,
   },
 }));
 
@@ -32,15 +32,15 @@ const Footer = () => {
       </Typography>
       <Typography variant="body2" className={classes.link}>
         <Link className={classes.link} color="inherit" href="https://www.ga4gh.org/about-us/ga4gh-inc/" target="_blank" rel="noopener noreferrer">
-          About Us
+          About GA4GH
         </Link>{' '}
         |{' '}
-        <Link className={classes.link} color="inherit" href="#" target="_blank" rel="noopener noreferrer">
+        <Link className={classes.link} color="inherit" href="https://ga4gh.github.io/ga4gh-testbed-ui/support" target="_blank" rel="noopener noreferrer">
           Support
         </Link>{' '}
         |{' '}
-        <Link className={classes.link} color="inherit" component={RouterLink} to="/specifications/" target="_blank" rel="noopener noreferrer">
-          Specifications
+        <Link className={classes.link} color="inherit" href="https://ga4gh.github.io/ga4gh-testbed-ui/specifications" target="_blank" rel="noopener noreferrer">
+          Specifications 
         </Link>
       </Typography>
     </footer>
