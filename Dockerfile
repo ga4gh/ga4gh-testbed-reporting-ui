@@ -1,17 +1,19 @@
-# Dockerfile for Connect April 2022 demo
+# Dockerfile for local development
 # UI pulls data from from testbed api in local docker-compose network
 
 # Builder
 FROM node:16.13.2-alpine3.15 as builder
 WORKDIR /app
+
+ARG ENV_FILE_PATH=.env.development
+
 ENV PATH /app/node_modules/.bin:$PATH
 
 COPY package.json package.json
 COPY package-lock.json package-lock.json
 RUN npm install
 
-COPY .env.development .env.development
-COPY .env.production .env.production
+COPY ${ENV_FILE_PATH} .env
 COPY public public
 COPY src src
 #RUN npm run reactBuild
